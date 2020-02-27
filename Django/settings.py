@@ -27,7 +27,7 @@ SECRET_KEY = 'yt9#molss@*x13!@#e3q#-e38-z9=vh%09t$qaqj0o40xvq=$t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['herokudjangoapp.herokuapp.com']
+ALLOWED_HOSTS = ['infinite-retreat-99792.herokuapp.com']
 
 
 # Application definition
