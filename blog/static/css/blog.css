@@ -23,8 +23,9 @@ h1, h2, h3, h4 {
 .save {
     float: right;
 }
+
 .post-form textarea, .post-form input {
-    width: 100%;
+    width: 70%;
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
@@ -35,7 +36,9 @@ h1, h2, h3, h4 {
 }
 
 .post {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+    word-wrap: break-word;
+    overflow-x:hidden;
 }
 
 .post h1 a, .post h1 a:visited {
