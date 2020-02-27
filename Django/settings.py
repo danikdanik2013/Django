@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['infinite-retreat-99792.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic'
     'blog',
     'django.contrib.admin',
     'django.contrib.auth',
