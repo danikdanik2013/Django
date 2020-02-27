@@ -3,6 +3,7 @@
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
+
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #ffffff;
     font-size: 36pt;
@@ -36,9 +37,12 @@ h1, h2, h3, h4 {
 }
 
 .post {
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 40px;
     word-wrap: break-word;
-    overflow-x:hidden;
+    overflow:hidden;
+    text-overflow: ellipsis;
 }
 
 .post h1 a, .post h1 a:visited {
