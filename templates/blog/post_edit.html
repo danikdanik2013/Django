@@ -1,0 +1,62 @@
+{% extends 'blog/base.html' %}
+
+{#{% block content %}#}
+{#    <div>#}
+{#        <form method='post' class="needs-validation post-form " novalidate>#}
+{#            {% csrf_token %}#}
+{#            {{ form.as_p }}#}
+{#            <div class="form-group my-5">#}
+{#                <label for="validationServer01">Title</label>#}
+{#                <input type="text" class="form-control" id="validationServer01" required>#}
+{#            <div class="valid-feedback">#}
+{#                Looks good!#}
+{#            </div>#}
+{#            <div class="invalid-feedback">#}
+{#                Write a title.#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="needs-validation">#}
+{#            <label for="validationServer02">Post</label>#}
+{#            <textarea class="form-control " id="validationServer02" rows="15" required></textarea>#}
+{#            <div class="valid-feedback">#}
+{#                Looks good!#}
+{#            </div>#}
+{#            <div class="invalid-feedback">#}
+{#                Write a title.#}
+{#            </div>#}
+{#        </div>#}
+{#        <button class="save btn btn-primary btn-lg mt-3" type="submit" >Submit</button>#}
+{#        </form>#}
+{##}
+{#    </form>#}
+{#<script>#}
+{#// Example starter JavaScript for disabling form submissions if there are invalid fields#}
+{#(function() {#}
+{#  'use strict';#}
+{#  window.addEventListener('load', function() {#}
+{#    // Fetch all the forms we want to apply custom Bootstrap validation styles to#}
+{#    var forms = document.getElementsByClassName('needs-validation');#}
+{#    // Loop over them and prevent submission#}
+{#    var validation = Array.prototype.filter.call(forms, function(form) {#}
+{#      form.addEventListener('submit', function(event) {#}
+{#        if (form.checkValidity() === false) {#}
+{#          event.preventDefault();#}
+{#          event.stopPropagation();#}
+{#        }#}
+{#        form.classList.add('was-validated');#}
+{#      }, false);#}
+{#    });#}
+{#  }, false);#}
+{# }#}
+{#)#}
+{#();#}
+{#</script>#}
+{#</div>#}
+{#{% endblock %}#}
+{% block content %}
+    <h1>New post</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
