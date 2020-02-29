@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9048533a-48a1-4022-8c93-3d9f816df2ec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/blog/account.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog/name.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -90,7 +101,8 @@
       <updated>1582808315418</updated>
       <workItem from="1582808327428" duration="22322000" />
       <workItem from="1582845387995" duration="4272000" />
-      <workItem from="1582882381709" duration="1493000" />
+      <workItem from="1582882381709" duration="5291000" />
+      <workItem from="1583005284553" duration="3487000" />
     </task>
     <servers />
   </component>
@@ -106,22 +118,22 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="765" y="296" width="447" height="513" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1582810504397" />
-    <state width="903" height="257" key="GridCell.Tab.0.bottom" timestamp="1582883982968">
+    <state width="1807" height="176" key="GridCell.Tab.0.bottom" timestamp="1583008911025">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="903" height="257" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1582883982968" />
-    <state width="903" height="257" key="GridCell.Tab.0.center" timestamp="1582883982967">
+    <state width="1807" height="176" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583008911025" />
+    <state width="1807" height="176" key="GridCell.Tab.0.center" timestamp="1583008911024">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="903" height="257" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1582883982967" />
-    <state width="903" height="257" key="GridCell.Tab.0.left" timestamp="1582883982967">
+    <state width="1807" height="176" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583008911024" />
+    <state width="1807" height="176" key="GridCell.Tab.0.left" timestamp="1583008911024">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="903" height="257" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1582883982967" />
-    <state width="903" height="257" key="GridCell.Tab.0.right" timestamp="1582883982968">
+    <state width="1807" height="176" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583008911024" />
+    <state width="1807" height="176" key="GridCell.Tab.0.right" timestamp="1583008911024">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="903" height="257" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1582883982968" />
+    <state width="1807" height="176" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583008911024" />
     <state x="482" y="187" key="SettingsEditor" timestamp="1582882430291">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -130,6 +142,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="167" y="125" width="1653" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1582812226446" />
+    <state x="631" y="247" width="724" height="610" key="find.popup" timestamp="1583006134219">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="631" y="247" width="724" height="610" key="find.popup/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583006134219" />
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1582822981290">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
