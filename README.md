@@ -5,3 +5,6 @@ for install this project you need:
 4) pip install -r requirements.txt
 5) python manage.py makemigrations
 6) python manage.py migrate
+
+For start server:
+python3 manage.py runserver 
