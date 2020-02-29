@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from django.shortcuts import redirect
 from django.http import HttpResponseRedirect, HttpResponse
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login as auth_login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from blog.forms import SignUpForm
 from django.urls import reverse
@@ -67,20 +67,23 @@ def post_edit(request, pk):
 #     return render(request, 'name.html', {'form': form})
 
 def login(request):
+    print(request.user.username)
+    print(1235)
     if request.method == 'POST' and not request.user.is_authenticated:
         username = request.POST.get('username')
         password = request.POST.get('password')
         user = authenticate(username=username, password=password)
+        print(user.username, user.password)
         if user:
             if user.is_active:
-                login(request, user)
+                auth_login(request, user)
                 return HttpResponseRedirect(reverse('post_list'))
             else:
                 return HttpResponse("Your account was inactive")
         else:
             print("Someone tried to login and failed.")
             print("They used username: {} and password: {}".format(username, password))
-            return HttpResponse("Invalid login details given")
+            return render(request, 'blog/login.html', {})
     else:
         return render(request, 'blog/login.html', {})
 
