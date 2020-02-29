@@ -7,4 +7,4 @@ for install this project you need:
 6) python manage.py migrate
 
 For start server:
-python3 manage.py runserver 
+python manage.py runserver 
