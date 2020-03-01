@@ -1,15 +1,15 @@
-from django.shortcuts import render, get_object_or_404
-from django.utils import timezone
-from django.shortcuts import redirect
-from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth import login as auth_login, authenticate
-from django.contrib.auth.forms import UserCreationForm
-from blog.forms import SignUpForm
-from django.urls import reverse
-from .forms import PostForm, NameForm
-from .models import Post
-from django.shortcuts import (HttpResponse, get_list_or_404, Http404)
 from django.contrib.auth.models import User
+from django.http import HttpResponseRedirect
+from django.shortcuts import (HttpResponse)
+from django.shortcuts import redirect
+from django.shortcuts import render, get_object_or_404
+from django.urls import reverse
+from django.utils import timezone
+
+from blog.forms import SignUpForm
+from .forms import PostForm
+from .models import Post
 
 
 def post_list(request):
@@ -73,7 +73,6 @@ def login(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         user = authenticate(username=username, password=password)
-        print(user.username, user.password)
         if user:
             if user.is_active:
                 auth_login(request, user)
