@@ -1,4 +1,5 @@
-from django.contrib.auth import login as auth_login, authenticate
+from django.contrib import messages
+from django.contrib.auth import login as auth_login, authenticate, logout
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.shortcuts import (HttpResponse)
@@ -107,3 +108,9 @@ def account(request):
     user = get_object_or_404(User, username=request.user.username)
 
     return render(request, 'blog/account.html', {'user': user})
+
+
+def acc_logout(request):
+    logout(request)
+    messages.info(request, "Logged out successfully!")
+    return redirect("post_list")

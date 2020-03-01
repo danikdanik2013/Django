@@ -18,7 +18,12 @@
             <button type="submit">Register</button>
         </form>
     {% else %}
-        <meta http-equiv="refresh" content="0" ; url={% url 'account' %}/>
+        <h2 >Your account doesn't have access to this page. To proceed,
+        please login with an account that has access.</h2>
+        <a class="btn btn-primary" href="{% url 'account' %}" role="button">Profile</a>
+        <a class="btn btn-primary" href="{% url 'logout' %}" role="button">Logout</a>
+
+
     {% endif %}
 
 
