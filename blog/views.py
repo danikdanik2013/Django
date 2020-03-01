@@ -52,24 +52,7 @@ def post_edit(request, pk):
     return render(request, 'blog/post_edit.html', {'form': form})
 
 
-# def get_name(request):
-#     # if this is a POST request we need to process the form data
-#     if request.method == 'POST':
-#         # create a form instance and populate it with data from the request:
-#         form = NameForm(request.POST)
-#         # check whether it's valid:
-#         if form.is_valid():
-#             return HttpResponseRedirect('/thanks/')
-#
-#     # if a GET (or any other method) we'll create a blank form
-#     else:
-#         form = NameForm()
-#
-#     return render(request, 'name.html', {'form': form})
-
 def login(request):
-    print(request.user.username)
-    print(1235)
     if request.method == 'POST' and not request.user.is_authenticated:
         username = request.POST.get('username')
         password = request.POST.get('password')
