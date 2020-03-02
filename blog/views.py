@@ -8,7 +8,7 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.utils import timezone
 
-from blog.forms import SignUpForm
+from blog.forms import SignUpForm, AccountForm
 from .forms import PostForm
 from .models import Post
 
@@ -97,3 +97,18 @@ def acc_logout(request):
     logout(request)
     messages.info(request, "Logged out successfully!")
     return redirect("post_list")
+
+
+def account_edit(request):
+    user = request.user
+    if request.method == "POST":
+        print(user.profile)
+        form = AccountForm(request.POST, instance=user)
+        if form.is_valid():
+            user = form.save()
+            return render(request, 'blog/account.html', {'user': user})
+
+    else:
+        form = AccountForm()
+
+    return render(request, 'blog/account_edit.html', {'form': form})

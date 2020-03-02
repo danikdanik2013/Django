@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9048533a-48a1-4022-8c93-3d9f816df2ec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/blog/account_edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/blog/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +107,7 @@
       <workItem from="1582882381709" duration="5291000" />
       <workItem from="1583005284553" duration="7774000" />
       <workItem from="1583060842368" duration="12419000" />
-      <workItem from="1583141570486" duration="3935000" />
+      <workItem from="1583141570486" duration="13006000" />
     </task>
     <task id="LOCAL-00001" summary="update parser">
       <created>1583012053557</created>
@@ -138,22 +143,22 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="765" y="296" width="447" height="513" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583011863955" />
-    <state width="1807" height="176" key="GridCell.Tab.0.bottom" timestamp="1583144046854">
+    <state width="1807" height="179" key="GridCell.Tab.0.bottom" timestamp="1583164831684">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="176" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583144046854" />
-    <state width="1807" height="176" key="GridCell.Tab.0.center" timestamp="1583144046854">
+    <state width="1807" height="179" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583164831684" />
+    <state width="1807" height="179" key="GridCell.Tab.0.center" timestamp="1583164831684">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="176" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583144046854" />
-    <state width="1807" height="176" key="GridCell.Tab.0.left" timestamp="1583144046854">
+    <state width="1807" height="179" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583164831684" />
+    <state width="1807" height="179" key="GridCell.Tab.0.left" timestamp="1583164831683">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="176" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583144046854" />
-    <state width="1807" height="176" key="GridCell.Tab.0.right" timestamp="1583144046854">
+    <state width="1807" height="179" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583164831683" />
+    <state width="1807" height="179" key="GridCell.Tab.0.right" timestamp="1583164831684">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="176" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583144046854" />
+    <state width="1807" height="179" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1583164831684" />
     <state x="482" y="187" key="SettingsEditor" timestamp="1583011841142">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
