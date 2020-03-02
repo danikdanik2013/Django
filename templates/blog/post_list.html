@@ -7,10 +7,9 @@
             <p>{{ post.text|linebreaksbr }}</p>
             {% if user.is_authenticated %}
                 {% ifequal post.author.id user.id %}
-                    <p></p>
-                    <a href="{% url 'post_edit' pk=post.pk %}" class="btn btn-primary btn-lg active mb-2" role="button"
-                       aria-pressed="true">Edit</a>
-                {% endifequal%}
+                    <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-primary btn-lg active mb-2" role="button"
+                       aria-pressed="true">More info</a>
+                {% endifequal %}
 
             {% endif %}
             {% if post.published_date %}
