@@ -4,8 +4,11 @@
     <div class="post">
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
-        <a href="{% url 'post_edit' pk=post.pk %}" class="btn btn-primary btn-lg active mb-2" role="button"
-           aria-pressed="true">Edit</a>
+        {% ifequal post.author.id user.id %}
+            <a href="{% url 'post_edit' pk=post.pk %}" class="btn btn-primary btn-lg active mb-2" role="button"
+               aria-pressed="true">Edit</a>
+        {% endifequal %}
+
 
         {% if post.published_date %}
             <div class="date">

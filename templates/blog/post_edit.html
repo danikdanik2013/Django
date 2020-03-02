@@ -54,10 +54,9 @@
 {#</div>#}
 {#{% endblock %}#}
 {% block content %}
-    <h1>New post</h1>
+    <h1>Edit post</h1>
     <form method="POST" class="post-form">
         {% csrf_token %}
-        <h2>New post</h2>
         <form method="POST" class="post-form">{% csrf_token %}
             {{ form.as_p }}
             <button type="submit" class="save btn btn-primary">Save</button>
