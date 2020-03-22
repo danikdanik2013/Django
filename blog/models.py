@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User
+from django.contrib.postgres.indexes import GinIndex
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -21,6 +22,7 @@ class Post(models.Model):
 
     class Meta:
         ordering = ['-created_date']
+        indexes = [GinIndex(fields=['title'])]
 
     def publish(self):
         self.published_date = timezone.now()
@@ -42,4 +44,3 @@ def update_user_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
     instance.profile.save()
-

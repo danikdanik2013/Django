@@ -7,7 +7,7 @@ from django.shortcuts import redirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.utils import timezone
-
+from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
 from blog.forms import SignUpForm, AccountForm
 from .forms import PostForm
 from .models import Post
@@ -115,3 +115,17 @@ def account_edit(request):
         form = AccountForm()
 
     return render(request, 'blog/account_edit.html', {'form': form})
+
+
+def search_result(request):
+    print(request.GET['search'])
+    if 'search' in request.GET:
+        text = request.GET['search']
+        print(text)
+        search = SearchVector('title', 'text')
+        query = SearchQuery(text)
+        posts = Post.objects.annotate(search=search).filter(search=query)
+        if posts:
+            return render(request, 'blog/post_list.html', {'posts': posts})
+
+    return render(request, 'blog/no_post.html')

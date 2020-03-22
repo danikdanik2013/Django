@@ -5,13 +5,9 @@
         <div class="post">
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
-            {% if user.is_authenticated %}
-                {% ifequal post.author.id user.id %}
-                    <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-primary btn-lg active mb-2" role="button"
-                       aria-pressed="true">More info</a>
-                {% endifequal %}
+            <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-primary btn-lg active mb-2" role="button"
+               aria-pressed="true">More info</a>
 
-            {% endif %}
             {% if post.published_date %}
                 <div class="date">
                     {{ post.published_date }} by {{ post.author }}
