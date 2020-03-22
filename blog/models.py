@@ -31,7 +31,7 @@ class Post(models.Model):
 
 
 class Profile(models.Model):
-    username = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     email = models.EmailField(null=True, blank=True)
     first_name = models.CharField(max_length=150, blank=True)
     last_name = models.CharField(max_length=150, blank=True)
@@ -43,5 +43,3 @@ def update_user_profile(sender, instance, created, **kwargs):
         Profile.objects.create(user=instance)
     instance.profile.save()
 
-
-post_save.connect(update_user_profile, sender=User, dispatch_uid="app_models_updateUserProfile")

@@ -75,9 +75,8 @@ def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            user.refresh_from_db()  # load the profile instance created by the signal
-            user.profile.birth_date = form.cleaned_data.get('birth_date')
+            user = form.save(commit=False)
+            user.user = request.user
             user.save()
 
             posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
