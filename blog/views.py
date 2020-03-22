@@ -79,6 +79,7 @@ def signup(request):
             user.refresh_from_db()  # load the profile instance created by the signal
             user.profile.birth_date = form.cleaned_data.get('birth_date')
             user.save()
+
             posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
 
             return render(request, 'blog/post_list.html', {'posts': posts})
@@ -105,7 +106,10 @@ def account_edit(request):
         print(user.profile)
         form = AccountForm(request.POST, instance=user)
         if form.is_valid():
+            print(form)
             user = form.save()
+            print(user)
+            user.save()
             return render(request, 'blog/account.html', {'user': user})
 
     else:

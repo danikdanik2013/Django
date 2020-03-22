@@ -6,7 +6,7 @@
     <h3>Your email: {{ user.email }}</h3>
     <h3>Date Joined :{{ user.date_joined }}</h3>
     <h3>B-day: {{ user.birth_date }}</h3>
-    <h3>Bio: {{ user.bio }}</h3>
+    <h3>Bio: {{ user.profile.bio }}</h3>
     <a class="btn btn-primary" href="{% url 'logout' %}" role="button">Logout</a>
     <a class="btn btn-primary" href="{% url 'account_edit' %}" role="button">Edit account</a>
 

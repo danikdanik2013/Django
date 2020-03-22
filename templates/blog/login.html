@@ -3,20 +3,31 @@
 {% block content %}
     {% if not user.is_authenticated %}
         <div class="container">
-            {#            <div class="jumbotron">#}
             <h1>Login here :</h1>
-            <form method="post" action="{% url 'login' %}">
+            <form method="post" action="{% url 'login' %}" class="needs-validation" novalidate>
                 {% csrf_token %}
-                <div class="form-group">
+                <div class="form-row">
                     <label for="username">Username:</label>
-                    <input class="form-control" type="text" name="username" placeholder="Username" required>
+                    <input type="text" class="form-control" id="username"  name="username" placeholder="Username"
+                           required>
+                    <div class="valid-tooltip">
+                        Looks good
+                    </div>
+                    <div class="invalid-tooltip">
+                        Invalid username
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="password">Password: </label>
-                    <input type="password" class="form-control" name="password" placeholder="Password"
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password"
                            aria-describedby="passwordHelpBlock" required>
+                    <div class="valid-tooltip">
+                        Looks good
+                    </div>
+                    <div class="invalid-tooltip">Invalid password</div>
                     <small id="passwordHelpBlock" class="form-text text-muted">
-                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain
+                        Your password must be 8-20 characters long, contain letters and numbers, and must not
+                        contain
                         spaces, special characters, or emoji.
                     </small>
                 </div>
