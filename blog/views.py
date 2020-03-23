@@ -1,13 +1,14 @@
 from django.contrib import messages
 from django.contrib.auth import login as auth_login, authenticate, logout
 from django.contrib.auth.models import User
+from django.contrib.postgres.search import SearchQuery, SearchVector
 from django.http import HttpResponseRedirect
 from django.shortcuts import (HttpResponse)
 from django.shortcuts import redirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.utils import timezone
-from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
+
 from blog.forms import SignUpForm, AccountForm
 from .forms import PostForm
 from .models import Post
@@ -118,10 +119,8 @@ def account_edit(request):
 
 
 def search_result(request):
-    print(request.GET['search'])
     if 'search' in request.GET:
         text = request.GET['search']
-        print(text)
         search = SearchVector('title', 'text')
         query = SearchQuery(text)
         posts = Post.objects.annotate(search=search).filter(search=query)
