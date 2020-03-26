@@ -41,3 +41,10 @@ class AccountForm(forms.ModelForm):
         model = Profile
         email = Email()
         fields = ('email', 'first_name', 'last_name')
+
+
+class EmailEdit(forms.ModelForm):
+    class Meta:
+        model = Profile
+        email = Email()
+        fields = ('email',)

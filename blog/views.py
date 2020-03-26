@@ -11,7 +11,7 @@ from django.utils import timezone
 
 from blog.forms import SignUpForm, AccountForm
 from .forms import PostForm
-from .models import Post
+from .models import Post, Profile
 
 
 def post_list(request):
@@ -79,10 +79,9 @@ def signup(request):
             user = form.save(commit=False)
             user.user = request.user
             user.save()
-
-            posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-
-            return render(request, 'blog/post_list.html', {'posts': posts})
+            if user:
+                auth_login(request, user)
+                return HttpResponseRedirect(reverse('post_list'))
     else:
         form = SignUpForm()
     return render(request, 'blog/signup.html', {'form': form})
@@ -103,12 +102,9 @@ def acc_logout(request):
 def account_edit(request):
     user = request.user
     if request.method == "POST":
-        print(user.profile)
         form = AccountForm(request.POST, instance=user)
         if form.is_valid():
-            print(form)
             user = form.save()
-            print(user)
             user.save()
             return render(request, 'blog/account.html', {'user': user})
 
@@ -116,6 +112,14 @@ def account_edit(request):
         form = AccountForm()
 
     return render(request, 'blog/account_edit.html', {'form': form})
+
+
+# def email_edit(request):
+#     user = request.user
+#     if request.method == "POST":
+#         user = Profile.objects.
+#
+#
 
 
 def search_result(request):
